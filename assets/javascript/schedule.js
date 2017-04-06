@@ -62,7 +62,7 @@ $(document).ready(function(){
 		var correctedTrain = trainName.replace(/ /g, '');
 
 		// Adds train data to table
-		$("#trainTable > tbody").append("<tr id =" + correctedTrain + "><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextTrain + "</td><td>" + minutesAway + "</td><td>" + "<button class="+ "delete btn-xs data-name=" + correctedTrain + ">delete</button>" + "</td></tr>");
+		$("#trainTable > tbody").append("<tr id =" + correctedTrain + "><td>" + trainName + "</td><td>" + destination + "</td><td>" + frequency + "</td><td>" + nextTrain + "</td><td>" + minutesAway + "</td></tr>");
 
 	});
 
@@ -70,7 +70,8 @@ $(document).ready(function(){
 
 		function date(){
 		// displays current time at top of page
-			$("#todaydate").html(moment(new Date()).format('LTS'));
+			
+			$("#todaydate").html(moment(new Date()).format('HH:mm:ss'));
 
 		}
 
